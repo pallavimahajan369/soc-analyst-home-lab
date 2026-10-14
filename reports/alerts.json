@@ -1,0 +1,24 @@
+{
+  "log_source": "synthetic_training_data",
+  "events_parsed": 7,
+  "alerts_generated": 2,
+  "alerts": [
+    {
+      "severity": "HIGH",
+      "rule": "PATH_TRAVERSAL_INDICATOR",
+      "source_ip": "192.168.1.40",
+      "path": "/../../etc/passwd",
+      "status": 400,
+      "line": 6,
+      "note": "Traversal-like path detected; validate in context."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "REPEATED_FAILED_LOGINS",
+      "source_ip": "192.168.1.20",
+      "count": 3,
+      "threshold": 3,
+      "note": "Investigate possible brute-force activity."
+    }
+  ]
+}
